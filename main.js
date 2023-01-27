@@ -1,9 +1,9 @@
 function openSideDrawer() {
-  document.getElementById("side-drawer").style.display = "block";
+  document.getElementById("side-drawer").classList.remove("d-none");
 }
 
 function closeSideDrawer() {
-  document.getElementById("side-drawer").style.display = "none";
+  document.getElementById("side-drawer").classList.add("d-none");
 }
 
 function playMusic(music) {

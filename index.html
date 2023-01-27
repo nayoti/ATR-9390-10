@@ -7,163 +7,233 @@
     <title>Home</title>
     <link rel="stylesheet" href="style.css" />
     <script src="./main.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
-    <aside class="side-drawer" id="side-drawer">
-      <div class="side-drawer__container">
-        <nav class="side-drawer__nav">
+    <aside
+      class="position-fixed top-0 start-0 w-100 h-100 bg-dark d-none side-drawer"
+      id="side-drawer"
+    >
+      <div
+        class="w-100 h-100 d-flex flex-column d-flex align-items-center justify-content-center"
+      >
+        <nav class="text-center">
           <ul>
             <li>
               <a
                 href="./index.html"
-                class="side-drawer__link side-drawer__link--active"
+                class="d-block mb-1 text-decoration-none fw-bold text-white"
                 >Home</a
               >
             </li>
             <li>
-              <a href="./experience.html" class="side-drawer__link"
+              <a
+                href="./experience.html"
+                class="d-block mb-1 text-decoration-none text-white"
                 >Experience</a
               >
             </li>
             <li>
-              <a href="./support.html" class="side-drawer__link">Support</a>
+              <a
+                href="./support.html"
+                class="d-block mb-1 text-decoration-none text-white"
+                >Support</a
+              >
             </li>
             <li>
-              <a href="./pricing.html" class="side-drawer__link">Pricing</a>
+              <a
+                href="./pricing.html"
+                class="d-block mb-1 text-decoration-none text-white"
+                >Pricing</a
+              >
             </li>
             <li>
-              <a href="./about.html" class="side-drawer__link">About</a>
+              <a
+                href="./about.html"
+                class="d-block mb-1 text-decoration-none text-white"
+                >About</a
+              >
             </li>
             <li>
-              <a href="./services.html" class="side-drawer__link">Services</a>
+              <a
+                href="./services.html"
+                class="d-block mb-1 text-decoration-none text-white"
+                >Services</a
+              >
             </li>
             <li>
               <a
                 href="./contact_us.html"
-                class="side-drawer__link--bg side-drawer__link"
+                class="d-block mb-1 mt-3 text-decoration-none bg-light text-dark py-2 px-3 rounded"
                 >Contact Us</a
               >
             </li>
           </ul>
         </nav>
 
-        <button onclick="closeSideDrawer()" class="side-drawer__btn">
+        <button
+          onclick="closeSideDrawer()"
+          class="position-absolute side-drawer__btn bg-light p-2 rounded d-flex"
+        >
           <img
             src="./assets/images/icons/x.svg"
             alt=""
-            class="side-drawer__img"
+            class="align-self-center"
           />
         </button>
       </div>
     </aside>
 
-    <header class="header">
-      <section class="header__container">
-        <div>
+    <header class="header header__container">
+      <section class="d-flex justify-content-between m-auto align-items-center">
+        <div class="d-flex align-items-center">
           <img
             src="./assets/images/core/logo.png"
             alt="naomi-tech company logo"
-            class="header__img"
+            class="align-self-center w-50"
           />
         </div>
 
         <nav class="header__nav">
-          <ul class="header__ul">
-            <li class="header__li">
-              <a href="./index.html" class="header__link header__link--active"
-                >Home</a
+          <ul class="list-unstyled d-flex align-items-center mb-0">
+            <li class="ms-4">
+              <a
+                href="./index.html"
+                class="text-decoration-none fw-bold text-dark"
+              >
+                Home
+              </a>
+            </li>
+            <li class="ms-3">
+              <a href="./experience.html" class="text-decoration-none text-dark"
+                >Experience</a
               >
             </li>
-            <li class="header__li">
-              <a href="./experience.html" class="header__link">Experience</a>
+            <li class="ms-3">
+              <a href="./support.html" class="text-decoration-none text-dark"
+                >Support</a
+              >
             </li>
-            <li class="header__li">
-              <a href="./support.html" class="header__link">Support</a>
+            <li class="ms-3">
+              <a href="./pricing.html" class="text-decoration-none text-dark"
+                >Pricing</a
+              >
             </li>
-            <li class="header__li">
-              <a href="./pricing.html" class="header__link">Pricing</a>
+            <li class="ms-3">
+              <a href="./about.html" class="text-decoration-none text-dark"
+                >About</a
+              >
             </li>
-            <li class="header__li">
-              <a href="./about.html" class="header__link">About</a>
+            <li class="ms-3">
+              <a href="./services.html" class="text-decoration-none text-dark"
+                >Services</a
+              >
             </li>
-            <li class="header__li">
-              <a href="./services.html" class="header__link">Services</a>
-            </li>
-            <li class="header__li">
-              <a href="./contact_us.html" class="header__li--bg">Contact Us</a>
+            <li class="ms-3 text-light rounded bg-dark py-2">
+              <a
+                href="./contact_us.html"
+                class="text-decoration-none text-light px-3 px-3"
+                >Contact Us</a
+              >
             </li>
           </ul>
         </nav>
 
-        <button class="header__btn" onclick="openSideDrawer()">Menu</button>
+        <button
+          class="text-light rounded bg-dark px-3 py-2 border-0 header__btn"
+          onclick="openSideDrawer()"
+        >
+          Menu
+        </button>
       </section>
     </header>
 
     <main>
-      <section class="hero">
-        <video autoplay loop class="hero__video">
+      <section class="d-flex hero w-100">
+        <video autoplay loop class="w-100 object-fit-cover position-relative">
           <source src="./assets/videos/hero.mp4" type="video/mp4" />
         </video>
       </section>
 
-      <section class="features">
-        <h3 class="features__title">Our Features</h3>
+      <section class="text-align-center mt-5 features">
+        <h3 class="mb-1 features__title fw-bold text-center">Our Features</h3>
 
-        <div class="features__list">
-          <div class="features__single-feature">
-            <img
-              src="./assets/images/icons/bar-chart-2.svg"
-              alt="feature - clean design"
-              class="features__img"
-            />
-            <div class="features__info">
-              <h4>Clean Design</h4>
-              <p class="features__description">
+        <div class="d-flex mt-3 features__list">
+          <div
+            class="p-3 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="p-2 d-inline-block features__img--bg rounded">
+              <img
+                src="./assets/images/icons/bar-chart-2.svg"
+                alt="feature - clean design"
+                class="rounded p-5 w-100"
+              />
+            </div>
+            <div class="mt-3 text-center">
+              <h4 class="features__sub_title fw-bold">Clean Design</h4>
+              <p class="mt-2 text-center">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
                 aut.
               </p>
             </div>
           </div>
 
-          <div class="features__single-feature">
-            <img
-              src="./assets/images/icons/check.svg"
-              alt="feature - ontime delivery"
-              class="features__img"
-            />
-            <div class="features__info">
-              <h4>Ontime Delivery</h4>
-              <p>
+          <div
+            class="p-3 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="p-2 d-inline-block features__img--bg rounded">
+              <img
+                src="./assets/images/icons/check.svg"
+                alt="feature - ontime delivery"
+                class="rounded p-5 w-100"
+              />
+            </div>
+            <div class="mt-3 text-center">
+              <h4 class="features__sub_title fw-bold">Ontime Delivery</h4>
+              <p class="mt-2">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
                 aut.
               </p>
             </div>
           </div>
 
-          <div class="features__single-feature">
-            <img
-              src="./assets/images/icons/grid.svg"
-              alt="feature - organized workflow"
-              class="features__img"
-            />
-            <div class="features__info">
-              <h4>Organized Workflow</h4>
-              <p>
+          <div
+            class="p-3 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="p-2 d-inline-block features__img--bg rounded">
+              <img
+                src="./assets/images/icons/grid.svg"
+                alt="feature - organized workflow"
+                class="rounded p-5 w-100"
+              />
+            </div>
+            <div class="mt-3 text-center">
+              <h4 class="features__sub_title fw-bold">Organized Workflow</h4>
+              <p class="mt-2">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
                 aut.
               </p>
             </div>
           </div>
 
-          <div class="features__single-feature">
-            <img
-              src="./assets/images/icons/heart.svg"
-              alt="feature - beautiful designs"
-              class="features__img"
-            />
-            <div class="features__info">
-              <h4>Beautiful Designs</h4>
-              <p>
+          <div
+            class="p-3 d-flex flex-column justify-content-center align-items-center"
+          >
+            <div class="p-2 d-inline-block features__img--bg rounded">
+              <img
+                src="./assets/images/icons/heart.svg"
+                alt="feature - beautiful designs"
+                class="rounded p-5 w-100"
+              />
+            </div>
+            <div class="mt-3 text-center">
+              <h4 class="features__sub_title fw-bold">Beautiful Designs</h4>
+              <p class="mt-2">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos,
                 aut.
               </p>
@@ -172,25 +242,25 @@
         </div>
       </section>
 
-      <section class="unique">
+      <section class="unique mt-4">
         <div>
           <h3>What Makes Us Unique</h3>
-          <p class="unique__info">
+          <p class="unique__info mt-1">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Repellendus consequatur voluptas modi tempore.
           </p>
         </div>
 
         <section class="unique__uniques-list">
-          <div class="unique__single">
+          <div class="d-flex align-items-center unique__single">
             <img
               src="./assets/images/bg/image0.png"
               alt="unique - 10% down payment only"
-              class="unique__img"
+              class="unique__img w-50"
             />
             <div class="unique__description">
-              <h3 class="unique__title">Only 10% Down Payment</h3>
-              <p class="unique__paragraph">
+              <h5 class="unique__title fw-bold">Only 10% Down Payment</h5>
+              <p class="unique__paragraph mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
                 distinctio ex eaque debitis nesciunt necessitatibus possimus
                 tempora, similique nihil ea eum. Quas nulla magnam aspernatur
@@ -206,10 +276,10 @@
             </div>
           </div>
 
-          <div class="unique__single unique__single-top">
+          <div class="d-flex align-items-center unique__single">
             <div class="unique__description">
-              <h3 class="unique__title">Highly Skilled Team Members</h3>
-              <p class="unique__paragraph">
+              <h5 class="unique__title fw-bold">Highly Skilled Team Members</h5>
+              <p class="unique__paragraph mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum
                 distinctio ex eaque debitis nesciunt necessitatibus possimus
                 tempora, similique nihil ea eum. Quas nulla magnam aspernatur
@@ -226,105 +296,143 @@
             <img
               src="./assets/images/bg/image1.png"
               alt="unique - highly skilled team members"
-              class="unique__img"
+              class="unique__img w-50"
             />
           </div>
         </section>
       </section>
 
-      <section class="question">
+      <section class="question mt-5 p-5 question--bg text-center">
         <h3>Any Questions?</h3>
-        <p class="question__info">
+        <p class="mt-2">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque .
         </p>
-        <a href="./contact_us.html" class="question__link">Contact Us</a>
+        <a
+          href="./contact_us.html"
+          class="question__link question__link--bg py-3 px-5 d-inline-block mt-3 rounded text-decoration-none"
+          >Contact Us</a
+        >
       </section>
     </main>
 
-    <footer class="footer">
-      <section class="footer__top">
+    <footer class="mt-3 footer--bg">
+      <section class="footer__top py-5 d-flex justify-content-between">
         <div>
           <img
             src="./assets/images/core/logo.png"
             alt="naomi-tech company logo"
-            class="footer__logo"
+            class="w-50"
           />
         </div>
 
-        <div class="footer__links">
-          <h4 class="footer__title">Links</h4>
+        <div>
+          <h5 class="fw-bold">Links</h5>
           <nav>
             <ul>
               <li>
-                <a href="./index.html">Home</a>
+                <a
+                  href="./index.html"
+                  class="d-block mb-1 text-decoration-none text-dark"
+                  >Home</a
+                >
               </li>
               <li>
-                <a href="./experience.html">Experience</a>
+                <a
+                  href="./experience.html"
+                  class="d-block mb-1 text-decoration-none text-dark"
+                  >Experience</a
+                >
               </li>
               <li>
-                <a href="./support.html">Support</a>
+                <a
+                  href="./support.html"
+                  class="d-block mb-1 text-decoration-none text-dark"
+                  >Support</a
+                >
               </li>
               <li>
-                <a href="./pricing.html">Pricing</a>
+                <a
+                  href="./pricing.html"
+                  class="d-block mb-1 text-decoration-none text-dark"
+                  >Pricing</a
+                >
               </li>
               <li>
-                <a href="./about.html">About</a>
+                <a
+                  href="./about.html"
+                  class="d-block mb-1 text-decoration-none text-dark"
+                  >About</a
+                >
               </li>
               <li>
-                <a href="./services.html">Services</a>
+                <a
+                  href="./services.html"
+                  class="d-block mb-1 text-decoration-none text-dark"
+                  >Services</a
+                >
               </li>
               <li>
-                <a href="./contact_us.html">Contact Us</a>
+                <a
+                  href="./contact_us.html"
+                  class="d-block mb-1 text-decoration-none text-dark"
+                  >Contact Us</a
+                >
               </li>
             </ul>
           </nav>
         </div>
 
         <div class="footer__links footer__links-subscribe">
-          <h4 class="footer__title">Subscribe</h4>
-          <p class="footer__desc">
-            Subscribe using your email and don't miss out on daily updates
-          </p>
-          <form action="" method="post" class="footer__form">
+          <h5 class="fw-bold">Subscribe</h5>
+          <p>Subscribe using your email and don't miss out on daily updates</p>
+          <form action="" method="post" class="d-flex mt-3 footer__form">
             <input
               type="text"
               id="email"
               name="email"
               placeholder="email@example.com"
-              class="footer__input"
+              class="border-0 py-3 px-4 rounded"
             />
             <input
               type="submit"
-              class="footer__input footer__input-submit"
+              class="border-0 py-3 px-4 rounded bg-dark text-light footer__input-submit"
               value="SUBSCRIBE"
             />
           </form>
         </div>
       </section>
 
-      <section class="footer__btm">
-        <div class="footer__copy">
-          <p class="footer__txt">@2022, All rights reserved.</p>
+      <section class="footer__btm--bg p-1 footer__btm">
+        <div
+          class="footer__copy d-flex align-items-center justify-content-between"
+        >
+          <p>@2022, All rights reserved.</p>
 
           <div>
             <img
               src="./assets/images/icons/facebook.svg"
               alt="company facebook link"
-              class="footer__icon"
+              class="ms-3"
             />
             <img
               src="./assets/images/icons/linkedin.svg"
               alt="company linkedin link"
-              class="footer__icon"
+              class="ms-3"
             />
             <img
               src="./assets/images/icons/twitter.svg"
               alt="company twitter link"
-              class="footer__icon"
+              class="ms-3"
             />
           </div>
         </div>
       </section>
     </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
